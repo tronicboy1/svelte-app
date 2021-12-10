@@ -554,26 +554,26 @@ var app = (function () {
     			button.textContent = "Add Item";
     			attr_dev(label0, "for", "title");
     			attr_dev(label0, "class", "svelte-9o73gs");
-    			add_location(label0, file$3, 10, 4, 219);
+    			add_location(label0, file$3, 12, 4, 254);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "name", "title");
     			attr_dev(input0, "class", "svelte-9o73gs");
-    			add_location(input0, file$3, 11, 4, 256);
+    			add_location(input0, file$3, 13, 4, 291);
     			attr_dev(div0, "class", "svelte-9o73gs");
-    			add_location(div0, file$3, 9, 2, 209);
+    			add_location(div0, file$3, 11, 2, 244);
     			attr_dev(label1, "for", "contents");
     			attr_dev(label1, "class", "svelte-9o73gs");
-    			add_location(label1, file$3, 14, 4, 331);
+    			add_location(label1, file$3, 16, 4, 366);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "name", "contents");
     			attr_dev(input1, "class", "svelte-9o73gs");
-    			add_location(input1, file$3, 15, 4, 374);
+    			add_location(input1, file$3, 17, 4, 409);
     			attr_dev(div1, "class", "svelte-9o73gs");
-    			add_location(div1, file$3, 13, 2, 321);
+    			add_location(div1, file$3, 15, 2, 356);
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$3, 17, 2, 445);
+    			add_location(button, file$3, 19, 2, 480);
     			attr_dev(form, "class", "form svelte-9o73gs");
-    			add_location(form, file$3, 8, 0, 147);
+    			add_location(form, file$3, 10, 0, 182);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -642,6 +642,8 @@ var app = (function () {
 
     	const handleSubmit = event => {
     		addNewItem(title, contents);
+    		$$invalidate(0, title = "");
+    		$$invalidate(1, contents = "");
     	};
 
     	const writable_props = ['addNewItem'];

@@ -6,6 +6,8 @@
 
   const handleSubmit = (event: Event) => {
     addNewItem(title, contents);
+    title = "";
+    contents = "";
   };
 </script>
 
